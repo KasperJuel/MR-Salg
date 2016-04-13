@@ -1,0 +1,94 @@
+﻿#body {
+    background-color: #cfcfd3;
+}
+
+#header {
+    width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #fff;
+    padding-top: 15px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    -webkit-box-shadow: 0 4px 10px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 4px 10px 0 rgba(0,0,0,0.75);
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.75);
+}
+
+#content {
+    width: 1200px;
+    min-height: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -webkit-box-shadow: 0 4px 10px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 4px 10px 0 rgba(0,0,0,0.75);
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.75);
+}
+
+.gen-input {
+    width: 400px;
+    height: 30px;
+    background-color: #d9d9d9;
+    border: none;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.btn-opret {
+    width: 60px;
+    height: 30px;
+    border: none;
+    background-color: #3badb5;
+    color: #fff;
+    -webkit-border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-left: -5px;
+}
+
+.form-control {
+    font-family: 'Droid Sans', sans-serif;
+    padding: 3px 3px;
+    width: 180px;
+}
+
+#left-column {
+    float: left;
+}
+
+#right-column {
+    float: left;
+    margin-left: 50px;
+    border-left: 1px solid #727272;
+    padding-left: 50px;
+}
+
+.clear {
+    clear: both;
+}
+
+#login {
+    width: 300px;
+    height: 310px;
+    margin: 0 auto;
+    background-color: #fff;
+    text-align: center;
+    margin-top: 100px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    box-shadow: 3px 5px 25px 4px;
+    padding: 10px;
+}
+
+#login .input-style-gen {
+    border: 1px solid #000;
+}
+
+#logo-login {
+    margin-top: 10px;
+}

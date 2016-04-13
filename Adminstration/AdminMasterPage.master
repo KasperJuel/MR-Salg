@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="Adminstration_AdminMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Admin</title>
+
+    <script src="../Scripts/jquery-1.9.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />
+
+    <link href="../Css/StyleSheet_Admin.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body id="body">
+    <form id="form1" runat="server">
+        <asp:Panel ID="pnlAdmin" runat="server" Visible="false">
+            <div id="header">
+
+                <div class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <ul class="nav navbar-nav">
+                            <li id="home">
+                                <a href="Default.aspx">Forside</a>
+                            </li>
+                            <li id="order">
+                                <a href="OrdrerOversigt.aspx">Ordrer Oversigt</a>
+                            </li>
+                            <li id="dele">
+                                <a href="DeleOversigt.aspx">Dele Oversigt</a>
+                            </li>
+                            <li id="beskeder">
+                                <a href="Beskeder.aspx">Beskeder</a>
+                            </li>
+                            <li>
+                                <a href="EditHandelsbetingelser.aspx">Handelsbetingelser</a>
+                            </li>
+                        </ul>
+                        <asp:Button ID="btnLogout" runat="server"
+                            Text="Logud" OnClick="btnLogout_Click"
+                            Style="height: 26px; margin-top: 10px; float: right;"
+                            CssClass="btn-style-gen" />
+                    </div>
+                    <div class="dropdown col-md-2" style="margin-bottom: 10px;">
+                        <button class="btn btn-primary dropdown-toggle col-md-12" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                            Opret Diverse
+                        </button>
+                        <ul class="dropdown-menu btn-success" role="menu" aria-labelledby="dropdownMenu1">
+                            <%--<li role="presentation"><a role="menuitem" tabindex="-1" href="opretBil.aspx">Opret ny Bil</a></li>--%>
+                            <%--                                <li role="presentation"><a role="menuitem" tabindex="-1" href="OpretKategori.aspx">Opret ny Kategori</a></li>--%>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="OpretMaerke.aspx">Opret nyt Bil Mærke</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="OpretModel.aspx">Opret ny Model</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="opretmotorstoerrelse.aspx">Opret ny Motorstørelse</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="opretAargang.aspx">Opret ny Årgang</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="OpretDel.aspx">Opret ny Del</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown col-md-2">
+                        <button class="btn btn-warning dropdown-toggle col-md-12" type="button" id="Button21" data-toggle="dropdown" aria-expanded="true">
+                            Rediger Diverse
+                        </button>
+                        <ul class="dropdown-menu btn-info" role="menu" aria-labelledby="dropdownMenu2">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="EditMaerke.aspx">Rediger Bil Mærke</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="EditModel.aspx">Rediger Model</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="EditMotorstoerelse.aspx">Rediger Motorstørelse</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="EditAargang.aspx">Rediger Ågang</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="EditDele.aspx">Rediger Dele</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown col-md-2">
+                        <button class="btn btn-danger dropdown-toggle col-md-12" type="button" id="Button1" data-toggle="dropdown" aria-expanded="true">
+                            Slet Diverse
+                        </button>
+                        <ul class="dropdown-menu btn-default" role="menu" aria-labelledby="dropdownMenu3">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="DeleteMaerke.aspx">Slet mærke</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="DeleteModel.aspx">Slet model</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="DeleteMotorstoerrelse.aspx">Slet motorstørrelse</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="DeleteAargang.aspx">Slet årgang</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="DeleteDel.aspx">Slet del</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <%--</div>--%>
+            </div>
+        </asp:Panel>
+        <div id="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>MR-Salg | Autodele</title>
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="MR-Salg: Salg af autodele til biler." />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link href="Css/StyleSheet.css" rel="stylesheet" />
+
+    <!-- JQuery -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- Lokale Scripts -->
+    <script src="Scripts/main.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" method="post" runat="server">
+
+
+        <div id="wrapper">
+            <div class="header-wrapper">
+                <header>
+                    <div id="brand">
+                        <a href="Default.aspx" title="MR-Salg">
+                            <img src="Images/MR-Salg_logo_01.png" alt="mr-salg" width="152" />
+                        </a>
+                    </div>
+
+                    <asp:TextBox ID="txtsoeg" runat="server" Placeholder="Indtast søgning" />
+                    <asp:Button ID="btnsoeg" runat="server" Text="Søg" OnClick="btnsoeg_Click" />
+
+                    <div id="top-nav">
+                        <a href="#">Om MR-Salg</a>
+                        <a href="Handelsbetingelser.aspx">Handelsbetingelser</a>
+                        <a href="kontakt">Kontakt</a>
+                    </div>
+
+                </header>
+
+            </div>
+            <%--wrapper--%>
+
+            <div class="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
+
+                <div style="clear: both;"></div>
+            </div>
+
+            <footer>
+                <div id="footer-adresse">
+                    <p style="color: #c62d3c">
+                        <b>MR-Salg</b>
+                    </p>
+                    <p>
+                        Telefon: 2785 7100
+                    </p>
+                    <p>
+                        CVR-nr: 35593446
+                    </p>
+                    <p>
+                        Korningvej 66
+                    </p>
+                    <p>
+                        8700
+                    </p>
+                    <p>
+                        Horsens
+                    </p>
+                </div>
+
+                <div id="footer-praktisk-info">
+                    <p style="color: #c62d3c">
+                        <b>Praktisk Info</b>
+                    </p>
+                    <p>
+                        <a href="#">Om MR-Salg</a>
+                    </p>
+                    <p>
+                        <a href="Handelsbetingelser.aspx">Handelsbetingelser</a>
+                    </p>
+
+                </div>
+
+                <div id="footer-kontakt">
+                    <p style="color: #c62d3c">
+                        <b>Kontakt</b>
+                    </p>
+                    <p>
+                        <a href="https://www.facebook.com/martin.vestergaard.92/" target="_blank">Facebook</a>
+                    </p>
+                    <p>
+                        <a href="Kontakt.aspx">Send en besked</a>
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </footer>
+        </div>
+
+    </form>
+</body>
+</html>
